@@ -9,7 +9,7 @@
 <body>
 
     <!-- Encabezado -->
-    <header>
+    <header class="encabezado">
         <h1>Mi Primera App en HTML</h1>
         <p>Ejemplo básico con componentes</p>
     </header>
@@ -23,15 +23,60 @@
     </nav>
 
     <!-- Contenido Principal -->
-    <main>
-        <div class="content">
+    <main class="contenedor-principal">
+
+        
+        <!--Primera sección-->
+        <section class="seccion bienvenida">
+
             <h2>Bienvenidos</h2>
+
             <p>Este es un ejemplo de una aplicación web básica utilizando HTML y CSS. Aquí puedes agregar más contenido y personalizarlo según tus necesidades.</p>
-        </div>
+
+        </section>
+
+        <!--Segunda sección-->
+        <section class="seccion seccion-html">
+
+            <h2>HTML5 y CSS3</h2>
+
+            <p>HTML5 y CSS3 son tecnologías fundamentales para el desarrollo web moderno. HTML5 proporciona la estructura y el contenido de la página, mientras que CSS3 permite estilizar y mejorar la apariencia visual.</p>
+
+            <img src="/imagenes/imagen2.jpg" alt="Imagen de HTML" class="imagen">
+            
+        </section>
+
+        <!--Tercera sección-->
+        <section class="seccion seccion-web">
+
+            <h2>Desarrollo de Aplicaciones Web</h2>
+
+            <p>El desarrollo de aplicaciones web implica la creación de sitios y aplicaciones que se ejecutan en navegadores web. Esto incluye el uso de lenguajes como HTML, CSS y JavaScript para construir interfaces interactivas y funcionales.</p>
+
+            <img src="/imagenes/imagen1.jpg" alt="Imagen de HTML" width="300" height="250" class="imagen">
+            
+        </section>
+
+        <!--Contenido complementarios-->
+
+         <aside class="barra-lateral">
+
+            <h2>Información adicional</h2>
+
+            <p>El desarrollo web permite crear sitios y aplicaciones que funcionan desde un navegador </p>
+        
+            <ul>
+                <li><a href="#">HTML Básico</a></li>
+                <li><a href="#">CSS Avanzado</a></li>
+                <li><a href="#">JavaScript para Principiantes</a></li>
+            </ul>
+
+        </aside>
+
     </main>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="pie-pagina">
         <p>&copy; 2026 | Hecho por Santiago Valencia | ADSO - SENA</p>
     </footer>
         

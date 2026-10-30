@@ -8,18 +8,18 @@
 
 body{
     font-family: arial, sans-serif;
+    background-color: #f5f5f5
 }
 
-header{
+/* Encabezado */
+.encabezado{
     background-color: #2b9909;
     color: #ffffff;
-    justify-content: center;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding: 15px 10px 25px;
 }
 
-h1 {
+.encabezado h1 {
     padding-bottom: 10px;
 }
 
@@ -27,14 +27,12 @@ h1 {
     display: flex;
     width: 100%;
     justify-content: center;
-    justify-items: center;
     gap: 40px;
     background-color: #000000;
-    text-decoration: none;
     padding: 20px;
 }
 
-a {
+.menu-nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.5 rem;
@@ -45,27 +43,75 @@ a:hover {
     color: #2b9909;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: #f5f5f5;
+/* Contenido principal */
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Distribución mediante áreas */
+    grid-template-areas:
+        "bienvenida bienvenida"
+        "html aside"
+        "web aside";
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
-/* Caja contenedora del contenido principal */
-.content {
+/* Secciones */
+
+.bienvenida {
+    grid-area: bienvenida;
+}
+
+.seccion-html {
+    grid-area: html;
+}
+
+.seccion-web {
+    grid-area: web;
+}
+
+.seccion {
     background: #ffffff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+/* Titulos */
+.seccion h2, .barra-lateral h2 {
     color: #2b9909;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
-footer {
+.barra-lateral {
+    grid-area: aside;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.barra-lateral ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.barra-lateral li {
+    padding: 10px 0;
+}
+
+.imagen {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.pie-pagina {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
