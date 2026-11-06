@@ -1,0 +1,203 @@
+/* Reseteo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Unidad rem: tamaño de referencia */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  color: #333333;
+  min-height: 100vh; /* el body ocupa al menos toda la altura de la ventana */
+  display: flex; /* apila header, nav, main y footer en columna para poder empujar el pie de página */
+  flex-direction: column;
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: #5b3524;
+  color: #fff;
+  padding: 2rem; /* 2 rem= 32px */
+  text-align: center;
+}
+
+.titulo {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2rem; /* 2 rem = 32px */
+  margin-bottom: 0.5em; /* 0.5 x 32px = 16px */
+}
+
+.lema {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* Menú de enlaces */
+.menu {
+  background-color: #d7b899;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8em 1em;
+}
+
+.enlace {
+  color: #333333;
+  text-decoration: none;
+  padding: 0.6em 1em;
+  border-radius: 5px;
+}
+
+.enlace:hover,
+.enlace[aria-current="page"] {
+  color: #ffffff;
+  background-color: #8a5a3b;
+}
+
+/* Contenido principal */
+.principal {
+  width: 100%; /* Necesario para que el grid ocupe todo el ancho disponible */
+  max-width: 960px; /* px: ancho máximo fijo, no escala */
+  margin: 2rem auto; /* centrado horizontalmente con margen automático */
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.seccion {
+  background-color: #f7f1e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #d7b899; /* px: borde fijo, no escala */
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.seccion p + p {
+  margin-top: 1em; /* 1 x 16px = 16px */
+}
+
+.subtitulo {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.25rem; /* 1.25rem = 20px */
+  margin-bottom: 0.8em; /* 0.8 x 20px = 16px */
+  color: #5b3524;
+}
+
+.destacado {
+  font-weight: 600;
+  font-style: italic;
+  color: #5B3524;
+}
+
+/* Página de contacto: Información */
+.contacto {
+  font-size: 1rem; /* 1rem = 16px */
+  margin: 1em 0; /* 1 x 16px = 16px */
+  color: #5b3524;
+  font-weight: bold;
+}
+
+.contacto a {
+  color: inherit; /* evita el azul por defecto de los enlaces  */
+  text-decoration: none;
+}
+
+.contacto a:hover {
+  color: #8a5a3b;
+}
+
+/* Formulario de contacto */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em; /* 1.5 x 16px = 24px */
+}
+
+.formulario label {
+  font-weight: bold;
+  color: #5b3524;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.5em; /* 0.5 x 16px = 8px */
+  border: 1px solid #d7b899;
+  border-radius: 8px;
+  font-size: 1rem; /* 1rem = 16px */
+  font-family: inherit; /* hereda la fuente del body */
+  font-size: 1rem; /* 1rem = 16px */
+  background-color: #fff;
+}
+
+.formulario textarea {
+  resize: vertical; /* permite redimensionar solo verticalmente */
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #8a5a3b;
+  box-shadow: 0 0 5px rgba(138, 90, 59, 0.5);
+}
+
+.precio {
+  font-size: 1.2em; /* 1.2 x 16px (font-size padre) = 19.2px */
+  font-weight: bold;
+  color: #5b3524;
+  margin: 1em 0;
+}
+
+.boton {
+  display: inline-block;
+  font-size: 1rem;
+  background-color: #5b3524;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+  font-family: inherit; /* hereda la fuente del body */
+}
+
+.formulario .boton {
+  align-self: flex-start; /* el botón mantiene su ancho natural */
+}
+
+.boton:hover {
+  background-color: #3a2116;
+}
+
+/* Pie de página */
+.pie {
+  background-color: #5b3524;
+  font-size: 0.75rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* para que el pie de página se mantenga al final de la página */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  /* px: punto de quiebre fijo */
+  .principal {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}

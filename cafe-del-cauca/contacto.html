@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café del Cauca - Contacto</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+      <h1 class="titulo">Café del Cauca</h1>
+      <p class="lema">Contáctanos para más información</p>
+    </header>
+
+    <!-- Menú: enlaces a las otras páginas -->
+     <nav class="menu">
+      <a class="enlace" href="index.html">Inicio</a>
+      <a class="enlace" href="nosotros.html">Nosotros</a>
+      <a class="enlace" href="contacto.html">Contacto</a>
+    </nav>
+
+    <!--Contenido principal con dos secciones-->
+    <main class="principal">
+      <section class="seccion">
+        <h2 class="subtitulo">Escríbenos</h2>
+        <p>
+          Si deseas realizar un pedido o conocer más sobre nuestros productos, por favor completa el siguiente formulario. Cuéntanos qué necesitas y te responderemos pronto.</p>
+        <form class="formulario">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            placeholder="Ingresa tu nombre"
+            autocomplete="name"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="correo@ejemplo.com"
+            autocomplete="email"
+          />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            required
+            placeholder="Escribe tu mensaje aquí"
+          ></textarea>
+
+          <button class="boton" type="submit">Enviar mensaje</button>
+        </form>
+      </section>
+
+      <section class="seccion">
+        <h2 class="subtitulo">Otros canales</h2>
+        <p>
+          Estamos aquí para ayudarte. ¡No dudes en ponerte en contacto con
+          nosotros!
+        </p>
+        <p class="contacto">WhatsApp: <a href="https://wa.me/573148473712">314 847 3785</a></p>
+        <p class="contacto">Email: <a href="mailto:info@cafedelcauca.com">info@cafedelcauca.com</a></p>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+      <p>&copy; 2026 Café del Cauca. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
